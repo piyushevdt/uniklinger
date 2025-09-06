@@ -1,0 +1,9 @@
+.custom-dots li button:before {
+    font-size: 60px; /* Size of the dots */
+    color: black; /* Color of the dots */
+  }
+  
+  .custom-dots li.slick-active button:before {
+    color: red; /* Color of the active dot */
+  }
+  

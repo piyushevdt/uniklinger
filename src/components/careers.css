@@ -1,0 +1,508 @@
+.searchBox {
+  border: 1px solid #0b3255;
+  background-color: #ffffff;
+  width: 437px;
+  height: 61px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 1;
+  text-align: center;
+  align-items: center;
+}
+
+.Search-Icon {
+  left: 95%;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+}
+
+.dropdown-text {
+  width: 20%;
+  height: 61px;
+  border: 1px solid #0b3255;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 15px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  appearance: none;
+  /* Hide the default arrow */
+  -webkit-appearance: none;
+  /* For Safari */
+  -moz-appearance: none;
+  /* For Firefox */
+  background-position: right 15px center;
+  background-repeat: no-repeat;
+  /* Prevent the arrow image from repeating */
+  padding-right: 20px;
+}
+
+.Senior-manager-container {
+  background: #eef2f7;
+  height: 117px;
+}
+
+.find-big-bold {
+  font-size: 40px;
+  line-height: 49.55px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #2a2a2a;
+  padding-top: 40px;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding-left: 20px;
+  color: #afafaf;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.Senior-manager-container-text {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: #2a2a2a;
+}
+
+.job-description-container {
+  background-color: #eef2f7;
+  padding: 30px;
+}
+
+.job-description {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.font-regular {
+  font-weight: 400;
+  color: #2a2a2a;
+}
+
+.form-text {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: #182023;
+}
+
+.right-arrow {
+  position: relative;
+  display: flex;
+  right: -8%;
+  margin: auto;
+  height: 60px;
+  justify-content: flex-end;
+  width: 60px;
+  align-items: flex-end;
+  align-content: flex-end;
+  background: linear-gradient(143.68deg, #0a6fce 29.29%, #c73a6f 91.69%);
+}
+
+.flex {
+  display: flex;
+}
+
+.apply-button-class {
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+  color: white;
+  padding: 10px 30px;
+  /* border-radius: 80px; */
+  border: none;
+  background: linear-gradient(90deg, #2b9cff 0%, #0066c1 34%, #c33b6f 100%);
+  margin-top: 10px;
+}
+
+.submit-button {
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  align-items: center;
+  color: white;
+  padding: 14px 40px 14px 40px;
+  border-radius: 80px;
+  border: none;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  background: linear-gradient(90deg, #2b9cff 0%, #0066c1 34%, #c33b6f 100%);
+  margin-top: 20px;
+}
+
+.carousel-container {
+  height: 500px;
+}
+
+.react-multi-carousel-list {
+  overflow: hidden !important;
+  width: 100%;
+  margin-left: 180px !important;
+}
+
+.mobile-cards-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  max-width:100%;
+}
+
+.scroll {
+  flex: 1;
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: auto; /* Enable horizontal scroll */
+  gap: 20px; /* Space between items */
+  padding: 10px; /* Optional padding */
+  scrollbar-width: thin; /* Thin scrollbar for Firefox */
+}
+
+.scroll::-webkit-scrollbar {
+  height: 8px; /* Set the height of the horizontal scrollbar */
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background: #136DCA; /* Set the color of the scrollbar thumb */
+  border-radius: 4px; /* Add rounded corners for the thumb */
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+  background: #0F5BA5; /* Slightly darker color when hovered */
+}
+
+.scroll::-webkit-scrollbar-track {
+  background: #0F5BA5; /* Background color of the scrollbar track */
+}
+
+
+
+.career-card { 
+  flex: auto;
+  flex-shrink: 0;
+  max-width: 300px;
+  margin-right: 20px;
+  background-color: #eef2f7 !important;
+}
+
+.card-body{
+  padding:0;
+}
+
+.job-title{
+  font-family: Poppins, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: left;
+}
+
+.card-title{
+  font-family: Poppins, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.87px;
+  text-align: left;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card-text{
+  font-family: Poppins,sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+text-align: left;
+padding-top: 20px;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+html {
+  overflow-x: hidden !important;
+}
+
+.mobile-card-description{
+  width:100%;
+}
+.mobile-card{
+  width:320px;
+}
+
+@media screen and (max-width:1921px){
+  .horizontal-scroll-wrapper{
+    background: #fff;
+    left: -37% !important;
+    margin: 0;
+    max-height: 101vw !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    top: 0;
+    transform: rotate(-90deg) translateY(-80px);
+    transform-origin: right top;
+    width: 600px;
+  }
+}
+@media (max-width: 1024px) {
+  .carousel-container {
+    width: 80% !important;
+    margin-left: 10% !important;
+  }
+}
+
+@media screen and (max-width:820px) {
+  .horizontal-scroll-wrapper{
+    max-height: 127vw !important;
+    left: -118% !important;
+  }
+
+  .shuffle-mobile{
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  .shuffle-mobile > div{
+    width: 100% !important;
+  }
+  .shuffle-mobile > select{
+    width: 100% !important;
+  }
+
+  .job-description-container{
+    display:none !important;
+  }
+
+  .job-list-container{
+    width:100% !important;
+  }
+
+  .job-list{
+    flex-direction: row !important;
+    overflow: auto;
+  }
+
+  .Senior-manager-container{
+    height: auto !important;
+    min-width: 320px;
+    position: relative;
+    padding-bottom: 48px !important;
+  }
+
+  .Senior-manager-container-text{
+    flex-wrap: wrap;
+    gap: 18px;
+    padding-top: 10px;
+  }
+
+  .right-arrow > img{
+    padding:21px !important;
+  }
+
+  .right-arrow{
+    position: absolute;
+    right: 4%;
+    top: 100px;
+    height: 60px;
+    width: 60px;
+  }
+
+  .find-big-bold{
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .input-container{
+    flex-direction: column;
+    gap: 0 !important;
+  }
+  .input-field{
+    width:100% !important;
+    padding-bottom: 10px !important;
+  }
+  .final-input{
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .section-subtitle > div{
+    width:80% !important
+  }
+  .Search-Icon{
+    left: 90% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .product-usecase-title{
+    padding-top: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  div[style*="height: 200px; width: 400px;"] {
+    flex-direction: column !important;
+    height: auto !important;
+    width: 100% !important;
+  }
+.card-body{
+  width:318px
+}
+  img[style*="width: '100%'; height: 200px;"] {
+    height: auto !important;
+  }
+}
+@media screen and (min-width: 2560px) {
+  /* Your styles here */
+  .horizontal-scroll-wrapper{
+ 
+    left: -26% !important;
+  }
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-button {
+  width: 2px;
+  height: 2px;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+}
+
+.image-container-wrapper {
+  width: 100%;
+  overflow: hidden; /* Prevent overflow outside the screen */
+}
+
+.career-banner {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+
+.horizontal-scroll-wrapper {
+  /* position: absolute;
+    display: block; */
+  top: 0;
+  left: 0;
+  width: 610px;
+  position: relative;
+  left: -56%;
+  max-height: 112vw;
+  margin: 0;
+  background: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg) translateY(-80px);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper>div {
+  display: block;
+  padding: 5px;
+  background-color: rgb(238, 242, 247);
+  /* transform: rotate(90deg); */
+  /* transform-origin: right top; */
+}
+
+.squares {
+  /* padding: 100px 0 0 0; */
+}
+
+.squares>div {
+  width: 800px;
+  height: 400px;
+  display: flex;
+  margin-top: 80%;
+}
+
+.why-us-card-description {
+  font-family: Poppins,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+ padding-top: 20px;
+}
+
+.rectangles {
+  top: 100px;
+  padding: 100px 0 0 0;
+}
+
+.rectangles>div {
+  width: 140px;
+  height: 60px;
+  margin: 50px 10px;
+  padding: 5px;
+  background-color: rgb(238, 242, 247);
+  /* transform: rotate(90deg) translateY(80px); */
+  /* transform-origin: right top; */
+}
+
+::placeholder {
+  /* Edge 12 -18 */
+  font-size: 14px !important;
+  line-height: 20;
+  color: rgba(175, 175, 175, 1) !important;
+}
+
+ .swiper{
+  overflow: visible !important;
+}
+.careers .swiper-slide{
+  width: 100% !important;
+  margin-left: 50px;
+}
+/* .careers .swiper-wrapper {
+width:800px !important
+} */
+.careers .swiper-container {
+  height: 50%; /* or a specific height */
+}
+
+.careers .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
+  height: 10px !important;
+    color: #136DCA;
+    width: 70% !important;
+bottom: 1px !important;
+left:47% !important
+}
+
+.careers .swiper-scrollbar-drag{
+  background-color: #136DCA !important;
+}
+
+.swiper-container-end .swiper-wrapper {
+  padding-right: 50px;  /* Adjust padding as needed to balance the end */
+}
+.careers .swiper-wrapper{
+  width:800px !important
+}

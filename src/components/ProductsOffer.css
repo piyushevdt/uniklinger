@@ -1,0 +1,93 @@
+.products-slider .slick-prev {
+  top: 70% !important;
+  margin-left: 20px !important;
+}
+
+.products-slider .slick-next {
+  top: 70% !important;
+  margin-right: 40px !important;
+
+}
+
+/* .products-slider .slick-prev {
+  top: 50%;
+  margin-left: 20px !important;
+  display: none;
+} */
+
+.products-slider .slick-list .slick-slide {
+  margin-right: 4px;
+}
+
+.products-slider .slick-prev:before {
+  font-size: 35px;
+  opacity: 1;
+  bottom: 30px;
+  display: none;
+}
+
+.products-slider .slick-dots {
+  font-size: 35px;
+  opacity: 1;
+  bottom: 0px;
+}
+
+.products-slider .slick-dots li button {
+  content: none !important;
+  border-radius: 50%;
+  background: #cad4e7 !important;
+  opacity: 1;
+  font-size: 35px;
+  bottom: -30px;
+}
+
+.products-slider .slick-dots li button:before {
+  font-size: 13px !important;
+  margin-top: 20px;
+  content: none !important;
+}
+
+.products-slider .slick-dots li.slick-active button {
+  width: 28px !important;
+  border-radius: 16px;
+  margin: 0 -5px;
+  background: #db1f51 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .products-slider .slick-list .slick-slide {
+    width: 315px;
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .products-slider .slick-list .slick-slide {
+    margin-right: 0px;
+  }
+
+  .products-slider .slick-dots {
+    font-size: 35px;
+    opacity: 1;
+    bottom: -40px !important;
+  }
+  .css-1lnhdtf-MuiCardMedia-root{
+    height: 180px;
+  }
+
+  .slick-slide > div >div>button>img{
+    height: 180px;
+
+  }
+  .slick-slide {
+    transition: all 0.2s ease;
+  }
+}
+
+@media screen and (max-width: 325px) { 
+  .productCardMobile {
+     font-size: 12px;
+  }
+}

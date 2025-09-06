@@ -1,0 +1,165 @@
+.App {
+  text-align: center;
+}
+/* App.css */
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.map-container {
+  width: 100%;
+  height: 500px; /* Adjust as needed */
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Map.css */
+.map-background {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  background-color: #f5f5f5;
+  background-image: radial-gradient(#c0c0c0 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.map-container {
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.leaflet-popup-content h3 {
+  margin-top: 0;
+  color: #d9232d; /* Adjust color to match your design */
+}
+
+.leaflet-popup-content p {
+  margin: 0;
+}
+
+.centerImage{
+  display: flex;
+  justify-content: center;
+}
+
+/* .custom-slider {
+  margin: 10px;
+  padding-bottom: 140px;
+  overflow: hidden;
+} */
+
+.custom-slider .slick-slide {
+  margin-left: 10px;
+
+
+}
+
+.custom-slider{
+  width: 100%;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 740px) {
+  
+.custom-slider{
+  width: 100%;
+  overflow:visible;
+  padding-bottom: 80px;
+  justify-content: center;
+}
+
+  .custom-slider .slick-slide {
+    margin: 10px;
+    width: 250.12px !important;
+    height: 200.28px;
+    /* margin-bottom: 20px; */
+  }
+  .custom-slider.slick-track{
+    display:flex
+  }
+
+
+  .custom-slider .slick-list{
+    padding:0px;
+  }
+}
+
+/* SLIDER NEW CODE */
+
+.slick-dots {
+  bottom: -20px !important; /* Adjust to prevent overlap */
+}
+
+.slick-arrow {
+  z-index: 2; /* Ensure arrows are above content */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
+  border-radius: 50%; /* Make them circular */
+}
+
+.slick-prev {
+  left: -40px; /* Adjust left position */
+}
+
+.slick-next {
+  right: -40px; /* Adjust right position */
+}
+
+/* @media only screen and (max-width: 740px) {
+  .custom-slider .slick-slide {
+    margin-left: 10px;
+    width: 290.12px !important;
+    height: 200.28px;
+    /* margin-bottom: 20px; */
+  /* } */
+/* }  */
+
+
+a.hover-link {
+  color: #000;
+  text-decoration: none; /* Optional */
+}
+
+a.hover-link:hover {
+  color: #DB1F51 !important;
+  cursor: pointer !important;
+}

@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Exclude oldwebsite directory from being handled here
+  RewriteCond %{REQUEST_URI} !^/oldwebsite/
+  
+  # Redirect all requests to the index.html, except for files and directories
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [L]
+</IfModule>

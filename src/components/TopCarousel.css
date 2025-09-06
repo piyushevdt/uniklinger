@@ -1,0 +1,33 @@
+.slick-list{
+    overflow: visible;
+}
+
+.slick-dots.custom-dots {
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .slick-dots.custom-dots li {
+    margin: 0 5px;
+  }
+  
+  .custom-dot .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc; /* Inactive dot color */
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-dot .dot.active {
+    background-color: #DB1F51;
+    width: 20px;
+    height: 12px;
+    border-radius: 12px; /* Active dot color */
+  }
+  
+  /* .slick-initialized .slick-slide {
+    display: block;
+    height: 512px;
+} */
