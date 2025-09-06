@@ -1,24 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "../components/ProductDetail.css";
-import WhiteLocation from "../assets/images/white-location.svg";
-import SmallMap from "../assets/images/small-map.png";
-import WhitePhone from "../assets/images/white-phone.svg";
-import WhiteMail from "../assets/images/white-mail.svg";
-import TextField from "@mui/material/TextField";
 import ButtonArrow from "../assets/images/button-arrow.svg";
 import DownloadIcon from "../assets/images/download.svg";
 
-import productDetail from "../assets/images/product-details.png";
 import productDetail1 from "../assets/images/products-details1.svg";
-import productDetail2 from "../assets/images/products-details2.svg";
-import productDetail3 from "../assets/images/products-details3.svg";
-import productDetail4 from "../assets/images/products-details4.svg";
 import lineSvg from "../assets/images/line.svg";
 import addSvg from "../assets/images/add.svg";
 
 import Accordion from "./Accordian";
-import ProductDetails5 from "../assets/images/product-details5.png";
-import TataSteel from "../assets/images/tata-steel.png";
 import CaseStudies from "./CaseStudies";
 import { Helmet } from "react-helmet-async";
 import Form from "./Form";
@@ -148,8 +137,6 @@ const ProductDetail = () => {
 }
                 </span>
               </div>
-              {/* <div className="Sealing-container"
-              itemProp="category">Fluid Sealing Division</div> */}
             </div>
             <div className="small-text pb-5">Graphite Sheets</div>
             <div>

@@ -2,30 +2,16 @@ import React, { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import slider from "../assets/images/slider-1.png";
 import product1 from "../assets/images/piston-valves.svg";
 import product2 from "../assets/images/steam-traps.svg";
 import product3 from "../assets/images/jointing.svg";
 import product4 from "../assets/images/safety-control.svg";
-import factory from "../assets/images/Mask group.png";
-import engineer from "../assets/images/image 22.png";
-import suman from "../assets/images/suman-majum.png";
-import quote from "../assets/images/“.png";
-import steel from "../assets/images/steal.png";
-import blog from "../assets/images/blog-card.png";
-import graphite from "../assets/images/Graphite-Sheets.png";
-import ppft from "../assets/images/extended-ppft-sheets.png";
-import ppft1 from "../assets/images/extended-ppft-sheets-1.png";
+
 import arrowImage from "../assets/images/product-arrow.svg";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { Button, CardActions, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import "./customDots.css";
 import Next from "../assets/images/nextArrow.svg";
-import RightSideArrow from "../assets/images/right-side-arrow.svg";
-import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 
 import {
   Card,
@@ -33,11 +19,8 @@ import {
   CardContent,
   CardMedia,
   Typography,
-  Grid,
-  useMediaQuery,
 } from "@mui/material";
 import "./ProductsOffer.css";
-import { Container } from "react-bootstrap";
 
 const NextArrow = (props) => {
   const { className, style, onClick } = props;
@@ -175,33 +158,6 @@ export default function ProductsOffer() {
       },
     ],
   };
-
-  // const settings = {
-  //   dots: false,
-  //   infinite: true,
-
-  //   nextArrow: <NextArrow />,
-  //   prevArrow: <PrevArrow />,
-  //   speed: 500,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   centerPadding: "10px",
-
-  //   responsive: [
-  //     {
-  //       breakpoint: 768, // Mobile breakpoint
-  //       settings: {
-  //         nextArrow: null,
-  //         prevArrow: null,
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //         initialSlide: 1,
-  //         infinite: false,
-  //         centerMode: true
-  //       }
-  //     }
-  //   ]
-  // };
 
   useEffect(() => {
     if (selectedProduct !== null && carouselRef.current) {
@@ -536,206 +492,8 @@ export default function ProductsOffer() {
           </div>
         )}
 
-        {/* <Swiper
-          className="home"
-          modules={[Navigation, Pagination]}
-          spaceBetween={10}
-          slidesPerView={3}
-          navigation={
-            cards.length >= 3
-              ? {
-                  nextEl: ".swiper-button-next",
-                  prevEl: ".swiper-button-prev"
-                }
-              : true
-          }
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: false }}
-          loop={false}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-          centerInsufficientSlides
-        >
-          {cards.length > 0 ? (
-            cards.map((card, index) => (
-              <SwiperSlide key={index}>
-                <Card sx={{ width: 398, height: 380 }}>
-                  <CardActionArea sx={{ height: "100%" }}>
-                    <CardMedia
-                      component="img"
-                      sx={{ objectFit: "cover", height: 240 }}
-                      image={BaseUrl.concat(
-                        card?.attributes?.Image?.data?.attributes?.url
-                      )}
-                      alt={card.attributes.Title}
-                    />
-                    <CardContent
-                      sx={{
-                        height: "calc(100% - 240px)",
-                        background: "#FFFFFF",
-                        border: "1px solid rgba(0, 0, 0, 0.1)",
-                        padding: 3
-                      }}
-                    >
-                      <div className="dmsans-bold leading-[22px] text-[24px]">
-                        {card?.attributes?.Title}
-                      </div>
-                      <Box
-                        display="flex"
-                        justifyContent="space-between"
-                        alignItems="center"
-                      >
-                        <Typography
-                          variant="body2"
-                          color="text.secondary"
-                          sx={{
-                            fontSize: "14px",
-                            color: "#2A2A2A",
-                            fontWeight: 400
-                          }}
-                        >
-                          {card.attributes.Description.slice(0, 80)}
-                          <span
-                            style={{
-                              color: "#222222",
-                              fontSize: 14,
-                              fontWeight: 600,
-                              paddingLeft: "5px"
-                            }}
-                          >
-                            Read More
-                          </span>
-                        </Typography>
-                        <button
-                          itemProp="url"
-                          // onClick={() => {
-                          //      navigate(`/products-listing?productId=${card.id}`);
-                          // }}
-                          onClick={() =>
-                            handleRedirection(card.attributes.redirect_url)
-                          }
-                        >
-                          <img
-                            src={arrowImage}
-                            alt="arrow"
-                            style={{
-                              width: "48px",
-                              height: "48px",
-                              marginLeft: "8px"
-                            }}
-                          />
-                        </button>
-                      </Box>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-              </SwiperSlide>
-            ))
-          ) : (
-            <SwiperSlide>No data available</SwiperSlide>
-          )}
-          {cards.length > 3 ? (
-            <>
-              <NextArrow
-                className="swiper-button-next"
-                style={{ marginRight: "35px" }}
-              />
-              <PrevArrow
-                className="swiper-button-prev"
-                style={{ marginLeft: "20px" }}
-              />
-            </>
-          ) : null}
-        </Swiper> */}
       </div>
       <div className="products-slider md:hidden ">
-        {/* <Slider {...settings} className="mt-[50px]  ">
-            {cards.map((card, index) => (
-              <Box
-                sx={{
-                  padding: "10px",
-                  border: "1px solid grey",
-                  boxShadow: "30px 8px 28px 20px #d9e9f9", // blur radius, spread, and color
-                  bgcolor: "#ffffff",
-                }}
-              >
-                <Card
-                  key={index}
-                  sx={{
-                    width: isMobile ? "100%" : "100%",
-                    boxShadow: "0px 4px 6px 0px #0973D840",
-                  }}
-                >
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      sx={{
-                        objectFit: "cover",
-                        height: isMobile ? "200px" : "247px",
-                        width: "100%",
-                      }}
-                      image={BaseUrl.concat(
-                        card?.attributes?.Image?.data?.attributes?.url
-                      )}
-                      alt="green iguana"
-                    />
-                    <CardContent>
-                      <div className="dmsans-bold text-[16px]">
-                        {card?.attributes?.Title}
-                      </div>
-
-                      <Box
-                        display="flex"
-                        justifyContent="space-between"
-                        alignItems="center"
-                      >
-                        <Typography
-                          variant="body2"
-                          color="text.secondary"
-                          sx={{
-                            fontSize: "12px",
-                            color: "#2A2A2A",
-                            fontWeight: 400,
-                          }}
-                        >
-                          {card?.attributes?.Description.slice(0, 20)}
-                          <span
-                            style={{
-                              color: "#222222",
-                              fontSize: 12,
-                              fontWeight: 600,
-                              paddingLeft: "5px",
-                            }}
-                          >
-                            Read More...
-                          </span>
-                        </Typography>
-                        <button
-                          itemProp="url"
-                          // onClick={() => {
-                          //      navigate(`/products-listing?productId=${card.id}`);
-                          // }}
-                          onClick={() =>
-                            handleRedirection(card.attributes.redirect_url)
-                          }
-                        >
-                          <img
-                            src={arrowImage}
-                            alt="arrow"
-                            style={{
-                              width: "38px",
-                              height: "38px",
-                              marginLeft: "8px",
-                            }}
-                          />
-                        </button>
-                      </Box>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-              </Box>
-            ))}
-          </Slider> */}
         <Slider {...settings} style={{ paddingBottom: "120px" }}>
           {cards.length > 0 ? (
             cards.map((card, index) => (

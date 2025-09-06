@@ -9,7 +9,6 @@ const MobileIndustrySolution = () => {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
-  const navigate = useNavigate();
   const BaseUrl = "https://ukladmin.3mindsdigital.com";
 
   const allowedIds = [1, 4, 14, 15, 16, 17, 20];

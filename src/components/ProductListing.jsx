@@ -3,10 +3,6 @@ import ProductsBannerListing from "../assets/images/productListingBanner.png";
 import SampleListing from "../assets/images/sampleListing.png";
 
 import ButtonArrow from "../assets/images/button-arrow.svg";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Helmet } from "react-helmet-async";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -14,7 +10,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 const ProductsListing = () => {
   const [toggle, setToggle] = useState(false);
   const [partnerTab, setPartnerTab] = useState("company");
-  const [locationTab, setLocationTab] = useState("manufacturing");
   const navigate = useNavigate()
 const [cards,setCards]=useState()
   const location = useLocation();
@@ -23,17 +18,6 @@ const [cards,setCards]=useState()
 
   const productId = queryParams.get('productId');
   console.log('productId ID:', productId);
-  const products = [
-    { title: "Compressed Non Asbestos Joining Sheet", imgSrc: SampleListing },
-    { title: "Product 2", imgSrc: SampleListing },
-    { title: "Product 3", imgSrc: SampleListing },
-    { title: "Product 4", imgSrc: SampleListing },
-    { title: "Product 4", imgSrc: SampleListing },
-
-    { title: "Product 4", imgSrc: SampleListing },
-
-    { title: "Product 4", imgSrc: SampleListing },
-  ];
   useEffect(() => {
     const toggles = document.getElementsByClassName("toggle");
     const contentDiv = document.getElementsByClassName("content");
@@ -66,11 +50,6 @@ const [cards,setCards]=useState()
       });
     } // Call the function once when the component mounts
   }, [toggle]);
-
-  const handlePartner = (tab) => {
-    console.log(tab);
-    setPartnerTab(tab);
-  };
 
   useEffect(() => {
     const getData = async () => {

@@ -3,14 +3,14 @@ import doc from "../assets/images/about-side-image.svg";
 import { IoArrowForward } from "react-icons/io5";
 
 const About = () => {
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 1440);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth > 1440);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  // const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 1440);
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsLargeScreen(window.innerWidth > 1440);
+  //   };
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   return (
     <>

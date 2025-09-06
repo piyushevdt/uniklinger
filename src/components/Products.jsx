@@ -14,7 +14,6 @@ const Products = () => {
   const [cards, setCards] = useState([]);
   const screenWidth = useResizeObserver(); // Use the custom hook
   const [isLoading, setIsLoading] = useState(true);
-const navigate= useNavigate()
   useEffect(() => {
     const getData = async () => {
       try {
@@ -27,10 +26,6 @@ const navigate= useNavigate()
 
     getData();
   }, []);
-
-  const downloadPDF = (url) => {
-    window.open(`https://ukladmin.3mindsdigital.com/${url}`, '_blank');
-  };
 
   const handleEnquiry = (title) => {
     const emailAddress = 'salescso@uniklinger.com';

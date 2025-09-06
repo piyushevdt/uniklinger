@@ -135,7 +135,6 @@ const AboutUs = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const [partnerTab, setPartnerTab] = useState("company");
-  const [locationTab, setLocationTab] = useState("manufacturing");
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [selectedPDF, setSelectedPDF] = useState(null);
   const [downloading, setDownloading] = useState(false);
@@ -181,49 +180,7 @@ const AboutUs = () => {
     setSelectedPDF(null);
     setDownloading(false);
   };
-  const handleDownloadPDF = () => {
-    const link = document.createElement("a");
-    link.href = pdfToDisplay;
-    link.download = "certificate.pdf";
-    link.click();
-  };
 
-  // useEffect(() => {
-  //   // Scroll to the top of the page when the component mounts
-  //   window.scrollTo(0, 0);
-  // }, []);
-  // useEffect(() => {
-  //   const toggles = document.getElementsByClassName("toggle");
-  //   const contentDiv = document.getElementsByClassName("content");
-  //   const icons = document.getElementsByClassName("icon");
-
-  //   for (let i = 0; i < toggles.length; i++) {
-  //     toggles[i].addEventListener("click", () => {
-  //       if (
-  //         parseInt(contentDiv[i].style.height) !== contentDiv[i].scrollHeight
-  //       ) {
-  //         contentDiv[i].style.height = contentDiv[i].scrollHeight + "px";
-  //         toggles[i].style.color = "var(--primary-color)";
-  //         icons[i].classList.remove("fa-plus");
-  //         icons[i].classList.add("fa-minus");
-  //       } else {
-  //         contentDiv[i].style.height = "0px";
-  //         toggles[i].style.color = "#111130";
-  //         icons[i].classList.remove("fa-minus");
-  //         icons[i].classList.add("fa-plus");
-  //       }
-
-  //       for (let j = 0; j < contentDiv.length; j++) {
-  //         if (j !== i) {
-  //           contentDiv[j].style.height = 0;
-  //           toggles[j].style.color = "#111130";
-  //           icons[j].classList.remove("fa-minus");
-  //           icons[j].classList.add("fa-plus");
-  //         }
-  //       }
-  //     });
-  //   } // Call the function once when the component mounts
-  // }, [toggle]);
 
   const handlePartner = (tab) => {
     console.log(tab);
@@ -249,10 +206,6 @@ const AboutUs = () => {
     }, 100);
   };
 
-  const handleLocation = (tab) => {
-    console.log(tab);
-    setLocationTab(tab);
-  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -267,15 +220,6 @@ const AboutUs = () => {
   const handleClose = () => {
     setSelectedPDF("");
   };
-
-  // useEffect(() => {
-  //   // const hash = window.location.hash.replace("#", "");
-  //   // console.log(hash,"hash")
-  //   // if (hash) {
-  //   //   setPartnerTab(hash);
-  //   // }
-  //   console.log("in here")
-  // }, []);
 
   useEffect(() => {
     const handleUrlChange = () => {
@@ -302,86 +246,10 @@ const AboutUs = () => {
       }
     };
 
-    // Call the function on initial load
     handleUrlChange();
   }, [location]); // Run effect whenever `location` changes
-  // function handleToggle(event) {
-  //   console.log("Clicked element:", event.target);
-  //   console.log("Parent element:", event.target.parentElement);
-  //   if (event) {
-  //     let content = event?.target?.parentElement?.children[1];
-  //     console.log("Content element:", content);
 
-  //     if (!content) {
-  //       console.error("Content element not found");
-  //       return;
-  //     }
 
-  //     if (content?.style?.maxHeight) {
-  //       content.style.maxHeight = null;
-  //       content.style.height = null;
-  //       event.target.children[0].classList.add("fa-plus");
-  //       event.target.children[0].classList.remove("fa-minus");
-  //     } else {
-  //       content.style.maxHeight = content.scrollHeight + "px";
-  //       content.style.height = content.scrollHeight + "px";
-  //       event.target.children[0].classList.add("fa-minus");
-  //       event.target.children[0].classList.remove("fa-plus");
-  //     }
-  //   }
-  // }
-
-  const handleIconClick = (event) => {
-    event.stopPropagation();
-
-    console.log("Clicked element:", event.target);
-
-    const parentElement = event.target.closest(".wrapper");
-    console.log("Parent element:", parentElement);
-    if (event) {
-      let content = event?.target?.closest(".wrapper").children[1];
-      console.log("Content element:", content);
-
-      if (!content) {
-        console.error("Content element not found");
-        return;
-      }
-
-      if (content?.style?.maxHeight) {
-        content.style.maxHeight = null;
-        content.style.height = null;
-        event.target.classList.add("fa-plus");
-        event.target.classList.remove("fa-minus");
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-        content.style.height = content.scrollHeight + "px";
-        event.target.classList.add("fa-minus");
-        event.target.classList.remove("fa-plus");
-      }
-    }
-  };
-  const handleToggle = (index) => {
-    console.log("here", index);
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
-  const sections = [
-    {
-      title: "Ethical Leadership & Integrity",
-      content:
-        "We maintain high ethical standards across all operations, ensuring transparency, integrity, and trust. Our governance policies prioritize corporate responsibility, fairness, and compliance to build a culture of accountability and respect.",
-    },
-    {
-      title: "Community & Employee Engagement",
-      content:
-        "We actively involve employees in community initiatives, conducting programs that focus on education, health, and environmental care. Together, we aim to uplift local communities and foster meaningful, positive change.",
-    },
-    {
-      title: "Sustainable Development & Empowerment",
-      content:
-        "We are dedicated to improving the lives of underserved communities through initiatives in education, healthcare, and environmental sustainability, empowering individuals and building long-term solutions for societal and economic development.",
-    },
-  ];
 
   const reports = [
     {
@@ -1288,20 +1156,6 @@ const AboutUs = () => {
                           </div>
                         </div>
                       </div>
-
-                      {/* <img src={AboutImg3} alt="card-image" style={{ height: 600, width: 360 }} className="banner-image p-1 h-full" />
-                  <div className="col-md-8 p-30 mt-10" style={{}}>
-                    <div className="font-46" >
-                      <span className="color-blue">Engineer. Innovate.</span><br />
-                      <span className="color-red">Deliver. Secure. Repeat</span>
-                    </div>
-                    <div className="font-16-regular ">
-                      Uniklinger embodies a philosophy of constant progress and innovation encapsulated in the phrase "Engineer. Innovate. Deliver. Secure." This commitment starts with their team of skilled engineers who design and develop top-notch fluid control and sealing solutions.
-                      <br /><br />
-                      Uniklinger doesn't just stop there, though. They prioritize continuous improvement and stay at the forefront of the industry by actively seeking new and advanced solutions. Delivering on their promises is equally important.
-                    </div>
-
-                  </div> */}
                     </div>
                   </div>
                   <div
@@ -1540,20 +1394,6 @@ const AboutUs = () => {
             />
           </div>
         </div>
-
-        {/* <div className="mt-[50px] scroller " data-speed="fast">
-          <div className="big-bold text-center">
-            <span className="font-300">Our</span> Clients
-          </div>
-          <div className="box-wrapper pt-12 gap-5">
-            <div className="scroller-box"></div>
-            <div className="scroller-box"></div>
-            <div className="scroller-box"></div>
-            <div className="scroller-box"></div>
-            <div className="scroller-box"></div>
-            <div className="scroller-box"></div>
-          </div>
-        </div> */}
 
         <div className="container mt-24" style={{ width: "100%" }}>
           <a href="https://uniklinger.com/careers" title="careeers">

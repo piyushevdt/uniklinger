@@ -1,6 +1,5 @@
 import React,{useState,useEffect} from 'react';
 import { Breadcrumbs, Link, Typography } from '@mui/material';
-import { Home as HomeIcon, NavigateNext as NavigateNextIcon } from '@mui/icons-material';
 
 const BreadcrumbsComponent = () => {
     const [pathSegments, setPathSegments] = useState([]);

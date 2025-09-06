@@ -5,7 +5,6 @@ import axios from "axios";
 import ChemicalPetrochemical from "../assets/images/ChemicalIndustry.svg";
 import Pharmaceutical from "../assets/images/PharmaIndustry.svg";
 import Rubber from "../assets/images/RubberIndustry.svg";
-import Soap from "../assets/images/SoapIndustry.svg";
 import Brewery from "../assets/images/BreweryIndustry.svg";
 import AeratedConcreteBlock from "../assets/images/AeratedConcreteBlock.svg";
 import Textiles from "../assets/images/TextileIndustry.svg";

@@ -69,9 +69,6 @@ export default function SimpleSlider() {
       autoplay: 0,
     },
   };
-  const getThumbnailUrl = (videoId) => {
-    return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-  };
 
   const playVideo = (videoId) => {
     // Stop the currently playing video if it's different from the new one
@@ -122,9 +119,6 @@ export default function SimpleSlider() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  const handleRedirection = (url) => {
-    window.open(url, "_blank");
-  };
 
   const settings = {
     dots: false,

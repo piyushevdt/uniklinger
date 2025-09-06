@@ -1,23 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../components/ProductDetail.css";
-import WhiteLocation from "../assets/images/white-location.svg";
-import SmallMap from "../assets/images/small-map.png";
-import WhitePhone from "../assets/images/white-phone.svg";
-import WhiteMail from "../assets/images/white-mail.svg";
-import TextField from "@mui/material/TextField";
-import ButtonArrow from "../assets/images/button-arrow.svg";
-// import productDetail1 from "../assets/images/product1.png";
 
 import { IoArrowForward } from "react-icons/io5";
 import MobileInsightBanner from "../assets/images/InsightMobile.svg";
 import ProductsBanner from "../assets/images/insighrtsDetailsBanner.png";
 import BlogImage from "../assets/images/Blog.png";
-import Watermark from "../assets/images/new-watermark.png";
-import Share from "../assets/images/Share.png";
-import Accordion from "./Accordian";
-import ProductDetails5 from "../assets/images/product-details5.png";
-import TataSteel from "../assets/images/tata-steel.png";
-import CaseStudies from "./CaseStudies";
 import { Helmet } from "react-helmet-async";
 import productDetail from "../assets/images/product-details.svg";
 import productDetail1 from "../assets/images/SpiralWoundGasket.svg";
@@ -48,55 +35,12 @@ const BlogDetail = () => {
     };
   }, []);
 
-  const queryParams = new URLSearchParams(location.search);
-  const BaseUrl = "https://ukladmin.3mindsdigital.com";
 
   const blogId = location.state?.blogId;
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const data = [
-    {
-      id: 1,
-      questions:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?",
-      answer:
-        "Impressions are a big deal when it comes to oSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-    },
-    {
-      id: 2,
-      questions:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?",
-      answer:
-        "Impressions are a big deal when it comes to oSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-    },
-    {
-      id: 3,
-      questions:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?",
-      answer:
-        "Impressions are a big deal when it comes to oSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-    },
-  ];
-  const [productTab, setProductTab] = useState("products");
-  const handleProduct = (tab) => {
-    console.log(tab);
-    setProductTab(tab);
-  };
-  const [toggledStates, setToggledStates] = useState({
-    product: false,
-    size: false,
-    specification: false,
-    keyfeatures: false,
-  });
-
-  const handleToggle = (section) => {
-    setToggledStates((prevState) => ({
-      ...prevState,
-      [section]: !prevState[section],
-    }));
-  };
-
+  
   useEffect(() => {
     // Create a new ResizeObserver instance
     const resizeObserver = new ResizeObserver((entries) => {
